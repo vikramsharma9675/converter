@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>
+Unit Convertor</title>
+<style>
+*{
+margin:auto;
+padding:10px;
+
+}
+body{
+margin:20%;
+}
+form{
+background-image:linear-gradient(to top,violet,cyan);
+margin:auto;
+height:280px;
+width:300px;
+border-radius:5px;
+}
+input{
+margin:15px;
+}
+input.but{
+margin-left:50px;
+margin-top:15px;
+}
+</style>
+<script language="JavaScript">
+
+function Convert(){
+document.converter.cm.value = document.converter.feet.value*30.48;
+}
+</script>
+<script>
+function check(){
+alert("Please enter a feet value is greater than 0 and we should be used number value not a text.");
+}</script>
+</head>
+<body>
+<form name="converter">
+<center>Unit Convertor</center>
+<label>Feet: </label><input type="number" name="feet" onChange="Convert()" placeholder="Enter Value in feet" onclick=check()><br><br>
+<label>CM:&nbsp;</label> <input type="number" name="cm" onChange="Convert()" placeholder="Result after click on button"><br><br>
+<input type="button" value="Convert!" class="but">
+</form>
+</center>
+</body>
+</html>
